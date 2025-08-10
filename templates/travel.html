@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeRoutes - Travel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="travel">
+
+  <h2>SafeRoutes: Find a Safe Path</h2>
+
+  <!-- Location Inputs -->
+  <div class="location-boxes">
+    <label for="pickup">📍 Pickup Location:</label><br>
+    <input type="text" id="pickup" name="pickup"><br><br>
+
+    <label for="destination">🏁 Destination:</label><br>
+    <input type="text" id="destination" name="destination"><br><br>
+
+    <button>Use Current Location</button>
+  </div>
+
+  <hr>
+
+  <!-- Map Section -->
+  <div class="mapapi">
+    <h3>Route Map Preview</h3>
+    <p>[Map will be displayed here]</p>
+  </div>
+
+  <hr>
+
+  <!-- Safety Preferences -->
+  <div>
+    <h3>User Safety Preferences</h3>
+    <input type="checkbox" id="isolated" name="isolated">
+    <label for="isolated">Avoid isolated roads</label><br>
+
+    <input type="checkbox" id="welllit" name="welllit">
+    <label for="welllit">Prefer well-lit paths</label><br>
+
+    <input type="checkbox" id="cctv" name="cctv">
+    <label for="cctv">CCTV coverage only</label><br>
+  </div>
+
+  <hr>
+
+  <!-- Route Options -->
+  <div>
+    <h3>Route Options</h3>
+
+    <p class="green-dot">🟢 <strong>Safest Route</strong><br>
+    Time: 25 min<br>
+    Rating: 4.9 ★ High Safety</p>
+
+    <p class="yellow-dot">🟡 <strong>Alternate Route</strong><br>
+    Time: 22 min<br>
+    Rating: 3.7 ★ Moderate Safety</p>
+
+    <p class="red-dot">🔴 <strong>Risky Route</strong><br>
+    Time: 20 min<br>
+    Rating: 2.5 ★ Low Safety</p>
+  </div>
+
+  <br>
+  <button>Get Safe Route</button>
+
+</body>
+</html>

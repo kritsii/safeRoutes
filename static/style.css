@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: #1a1a1a;
+  color: #fdfdfd;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: #6ec2b8;
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff007f;
+}
+.nav-actions {
+  display: flex;
+  gap: 12px;
+}
+.login-btn,
+.signup-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px none;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #e45582;
+  color:#fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  max-width: ;
+}
+.signup-btn {
+  background-color: #6ec2b8;
+  color: #fffdd0;
+  border: 1px solid;
+}
+.login-btn:hover,
+.signup-btn:hover {
+  opacity: 0.85;
+  background-color: #c5486f;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background-color: #fffdd0;
+  color: white;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:#20443c ;
+}
+.hero p {
+  font-size: 18px;
+  color:#20443c;
+  margin-bottom: 30px;
+}
+.getstarted-btn {
+  padding: 14px 28px;
+  background-color: #e45582;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+.getstarted-btn:hover {
+  background-color: #c5486f;
+}
+
+/* Sliding Cards Section */
+.card-slider {
+  background-color: #6ec2b8;
+  padding: 60px 20px;
+  position: relative;
+  overflow-x: auto;
+}
+.slider-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card-track {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+.card {
+  min-width: 280px;
+  background-color: #ffffff;
+  color: #20443c;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+.arrow{
+  font-size: 32px;
+  background-color: #fff;
+  color: #00796b;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.arrow:hover{
+  background-color: #c4bfbf;
+}
+.arrow.left{
+  margin-right: 10px;
+}
+.arrow.right{
+  margin-left: 10px;
+}
+.card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 14px;
+  color:#20443c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #20443c;
+  color: #ffffff;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+/* signup page*/
+body.signup{
+  margin: 0;
+  padding: 0;
+  font-family:'helvetica Neue', helvetica,Arial,sans-serif ;
+  background-color: #6ec2b8;
+  color: #111;
+}
+.auth-container{
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 40px 30px;
+  background-color: #fffdd0;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.auth-container h2{
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.auth-container form{
+  display: flex;
+  flex-direction: column;
+}
+.auth-container label{
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.auth-container input{
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 12px;
+  font-size: 15px;
+  background-color: #fff;
+  transition: border 0.2s;
+}
+.auth-container input:focus{
+  border: 1.5px solid #000;
+  outline: none;
+}
+.auth-container button{
+  padding: 14px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.auth-container button:hover{
+  background-color: #333;
+}
+.auth-container p{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.auth-container a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+.auth-container a:hover{
+  text-decoration: underline;
+}
+/* ---------- LOGIN PAGE STYLES ---------- */
+body.login-page {
+  background: #6ec2b8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #fffdd0;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2e2e2e;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+  color: #000;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #2c5364;
+  outline: none;
+}
+
+
+
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: #555;
+}
+
+.register-link a {
+  color: #e44582;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+}
+/*-------travel page---------*/
+body.travel{
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container */
+.location-boxes {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  
+  position: relative;
+}
+
+/* Headings */
+h2, h3 {
+  color: #004d46;
+  text-align: center;
+  margin-top: 0;
+}
+
+.location-boxes input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2.5px solid #6ec2b8;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* Buttons */
+button {
+  background-color: #f91e63;
+  color: white;
+  padding:12px 10px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #d81854;
+}
+.mapapi {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Route Options Section */
+.route-options {
+  margin-top: 2rem;
+}
+
+.route-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Optional color-coded routes */
+.route-card.green { border-color: #4caf50; }
+.route-card.yellow { border-color: #ffc107; }
+.route-card.red { border-color: #f44336; }
+
+/* Preferences Section */
+.preferences label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+/* Footer for travel page */
+footer {
+  text-align: center;
+  background-color: #004d46;
+  color: white;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+
+
+   
